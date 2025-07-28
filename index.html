@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Project Gallery</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="header">
+    <h1>Our Portfolio</h1>
+    <p>Discover what our interns have built</p>
+  </header>
+
+  <section class="gallery">
+    <!-- 1 -->
+    <div class="card">
+      <img src="chatbot.jpg" alt="AI Chatbot" />
+      <div class="card-content">
+        <h3>AI Chatbot Project</h3>
+        <p>Python chatbot with Flask and NLP, ideal for FAQs or support.</p>
+        <button onclick="showProject(this)"
+          data-title="AI Chatbot Project"
+          data-image="chatbot.jpg"
+          data-tech="Python, Flask, NLP, HTML/CSS"
+          data-detail="This chatbot uses trained intents and patterns to reply intelligently to user queries. It integrates with a web interface and handles conversations.">
+          View Project
+        </button>
+      </div>
+    </div>
+
+    <!-- 2 -->
+    <div class="card">
+      <img src="portfolio.jpg" alt="Personal Portfolio" />
+      <div class="card-content">
+        <h3>Personal Portfolio</h3>
+        <p>Developer portfolio with About, Skills, and Contact.</p>
+        <button onclick="showProject(this)"
+          data-title="Personal Portfolio"
+          data-image="portfolio.jpg"
+          data-tech="HTML, CSS, JavaScript"
+          data-detail="A stylish personal site to showcase projects, skills, and contact info with smooth scrolling and responsive design.">
+          View Project
+        </button>
+      </div>
+    </div>
+
+    <!-- 3 -->
+    <div class="card">
+      <img src="ecommerce.jpg" alt="E-Commerce Website" />
+      <div class="card-content">
+        <h3>E-Commerce Website</h3>
+        <p>Store UI with product grid, filters, and cart.</p>
+        <button onclick="showProject(this)"
+          data-title="E-Commerce Website"
+          data-image="ecommerce.jpg"
+          data-tech="HTML, CSS Grid, JavaScript"
+          data-detail="Front-end e-commerce layout with filterable products and add-to-cart features using clean UI components.">
+          View Project
+        </button>
+      </div>
+    </div>
+
+    <!-- 4 -->
+    <div class="card">
+      <img src="internship-tracker.jpg" alt="Internship Tracker" />
+      <div class="card-content">
+        <h3>Internship Tracker</h3>
+        <p>Dashboard for tracking intern progress, XP, and status.</p>
+        <button onclick="showProject(this)"
+          data-title="Internship Tracker"
+          data-image="internship-tracker.jpg"
+          data-tech="HTML, CSS, JavaScript"
+          data-detail="This app tracks interns' milestones, XP points, and logs. It features a clean dashboard layout and responsive cards.">
+          View Project
+        </button>
+      </div>
+    </div>
+
+    <!-- 5 -->
+    <div class="card">
+      <img src="blog-platform.jpg" alt="Blog Platform" />
+      <div class="card-content">
+        <h3>Blog Platform</h3>
+        <p>Clean UI blog with categories, thumbnails, and layout.</p>
+        <button onclick="showProject(this)"
+          data-title="Blog Platform"
+          data-image="blog-platform.jpg"
+          data-tech="HTML, CSS, JavaScript"
+          data-detail="This project supports blog posts, categories, and modern layouts with hover effects and mobile responsiveness.">
+          View Project
+        </button>
+      </div>
+    </div>
+
+    <!-- 6 -->
+    <div class="card">
+      <img src="weather-app.jpg" alt="Weather App" />
+      <div class="card-content">
+        <h3>Weather App</h3>
+        <p>Real-time weather info using OpenWeatherMap API.</p>
+        <button onclick="showProject(this)"
+          data-title="Weather App"
+          data-image="weather-app.jpg"
+          data-tech="JavaScript, API, HTML/CSS"
+          data-detail="Search any city and get current weather like temperature, humidity, and conditions with a clean responsive UI.">
+          View Project
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal -->
+  <div id="projectModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <img id="modal-image" src="" alt="Project Image" />
+      <h2 id="modal-title"></h2>
+      <p><strong>Technologies Used:</strong> <span id="modal-tech"></span></p>
+      <p id="modal-description"></p>
+    </div>
+  </div>
+
+  <!-- Scroll to top -->
+  <button id="scrollTopBtn" title="Go to top">↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
